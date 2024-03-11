@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title>FootBall Quiz</title>
+</head>
+<style> .hide{
+    display: none;
+}
+</style>
+<body>
+    <h1>Football Quiz<h1>
+Q1. How many UCL does PSG Have ? <br>
+<input type="radio" name="question1" id="correct1">0<br>
+<input type="radio" name="question1" id='correct0'> 1 <br>
+<input type="radio" name="question1" id='correct0'> 6<br>
+<input type="radio" name="question1"id='correct0'> 14<br>
+
+Q2. Who is the gretest football player of all time?<br>
+<input type="radio" name="question2" id='correct0'>Messi <br>
+<input type="radio" name="question2"id='correct0'> Neymar <br>
+<input type="radio" name="question2" id="correct2">Ronaldo <br>
+<input type="radio" name="question2"id='correct0'> Pele <br>
+
+Q3. Which nation  won the world cup in 2014 ?<br>
+<input type="radio" name="question3" id='correct0'>France <br>
+<input type="radio" name="question3"id="correct3">Gremany <br>
+<input type="radio" name="question3"id='correct0'>Italy <br>
+<input type="radio" name="question3"id='correct0'>Brazil <br>
+
+Q4.When did portugal win the euros ?<br>
+<input type="radio" name="question4" id="correct4" > 2016<br>
+<input type="radio" name="question4"id='correct0'>2008<br>
+<input type="radio" name="question4"id='correct0'>2020 <br>
+<input type="radio" name="question4"id='correct0'>2012 <br>
+Q5. How many ballandors has messi won ?<br>
+<input type="radio" name="question5" id='correct0'>5<br>
+<input type="radio" name="question5"id="correct5">8 <br>
+<input type="radio" name="question5"id='correct0'>7 <br>
+<input type="radio" name="question5"id='correct0'>6 <br>
+<button id ='submitp1'>submit<button>
+Q6. Which Club won the UCL in 2013 ? <br>
+<input type="radio" name="question6" id='correct11'class='hide'> Real Madrid<br>
+<input type="radio" name="question6"id='correct11' class='hide'> Spurs <br>
+<input type="radio" name="question6"id="correct6" class='hide'> Bayern Munich <br>
+<input type="radio" name="question6"id='correct11' class='hide'>Manchester City <br>
+Q7. Which nation is hosting the UCl final 2024 ?<br>
+<input type="radio" name="question7" id='correct11'class='hide'>Spain <br>
+<input type="radio" name="question7"id="correct7"class='hide'>England <br>
+<input type="radio" name="question7"id='correct11'class='hide'>France <br>
+<input type="radio" name="question7"id='correct11'class='hide'>Italy<br>
+
+Q8. Which nation won the 2010 worldcup ?<br>
+<input type="radio" name="question8"id="correct8"class='hide'>Spain<br>
+<input type="radio" name="question8" id='correct11'class='hide'>France <br>
+<input type="radio" name="question8"id='correct11'class='hide'>Italy <br>
+<input type="radio" name="question8"id='correct11'class='hide'>Brazil <br>
+
+Q9.  Which club won the PL in 2023  ?<br>
+<input type="radio" name="question9"id='correct11'class='hide'>Manchester United<br>
+
+<input type="radio" name="question9"id='correct11'class='hide'> <br>
+<input type="radio" name="question9"id="correct9"class='hide'>Manchester City<br>
+<input type="radio" name="question9"id='correct11'class='hide'>Brazil <br>
+Q10. When did Ronald win his last ballendor ?<br>
+<input type="radio" name="question10"id='correct11'class='hide' > 2016<br>
+<input type="radio" name="question10"id="correct10"class='hide'>2017 <br>
+<input type="radio" name="question10"id='correct11'class='hide'>2020 <br>
+<input type="radio" name="question10"id='correct11'class='hide'>2015 <br>
+<button id='submitp2'> Submit</button>
+
+
+<script type="text/javascript">
+    let btn1=document.querySelector('#submitp1')
+    let btn2=document.querySelector('#submit2')
+    let answers=document.querySelectorAll('#correct0')
+    let correctansw=document.querySelector('#correct1')
+    let correctanswe=document.querySelector('#correct2')
+    let correctans=document.querySelector('#correct3')
+    let correctan=document.querySelector('#correct4')
+    let correcta=document.querySelector('#correct5')
+    let correct=document.querySelector('#correct6')
+    let correc=document.querySelector('#correct7')
+    let corre=document.querySelector('#correct8')
+    let corr=document.querySelector('#correct9')
+    let cor=document.querySelector('#correct10')
+    let ans=document.querySelectorAll('#correct11')
+function result1()
+{
+	let p1score=0;
+    let p2score=0;
+    btn1.addEventListener('click',result1)
+	if(document.getElementById('correct1').checked)
+    
+		{	p1score++;
+		}
+	if(document.getElementById('correct2').checked)
+		{	p1score++;
+		}
+	if(document.getElementById('correct3').checked)
+		{	p1score++;    
+		}
+        if(document.getElementById('correct4').checked)
+		{	p1score++;
+		}
+        if(document.getElementById('correct5').checked)
+		{	p1score++;
+		}}
+        document.write( "player 1 Your score is:"+p1score);
+     function result2(){
+        answer.classlist.add('hide')
+correctansw.classList.add('hide')
+correctanswe.classList.add('hide')
+correctans.classList.add('hide')
+correctan.classList.add('hide')
+correcta.classList.add('hide')
+ans.classlist.add('hide')
+correct.classList.remove('hide')
+correc.classList.remove('hide')
+corre.classList.remove('hide')
+corr.classList.remove('hide')
+cor.classList.remove('hide')
+        if(document.getElementById('correct6').checked)
+		{	p2score++;
+		}if(document.getElementById('correct7').checked)
+		{	p2score++;
+		}if(document.getElementById('correct8').checked)
+		{	p2score++;
+		}if(document.getElementById('correct9').checked)
+		{	p2score++;
+		}if(document.getElementById('correct10').checked)
+		{	p2score++;
+		} 
+ ;
+ // to print on browser
+  document.write( "player 2 Your score is:"+p2score);
+    }
+</script>
+
+</body>
+</html>

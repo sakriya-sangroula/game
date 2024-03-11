@@ -7,53 +7,29 @@ let guessNumberBtn = document.querySelector('#guessNumberBtn');
 let h2 = document.querySelector('#h2');
 
 startGameBtn.addEventListener('click', function(){
-  maxNumber.classList.remove('hide');
-  maxNumberBtn.classList.remove('hide');
-  startGameBtn.classList.add('hide');
-});
-
-maxNumberBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    let maximum = parseInt(maxNumber.value);
-    if (!maximum || isNaN(maximum)) {
-        h1.innerText = "Enter a Valid Value to Play";
-    } else {
-        h1.innerText = 'Guess The Number';
-        maxNumber.classList.add('hide');
-        maxNumberBtn.classList.add('hide');
-        guess.classList.remove('hide');
-        guessNumberBtn.classList.remove('hide');
-        h2.classList.remove('hide')
-        
-        const requirednum = Math.floor(Math.random() * maximum) + 1;
-        console.log(requirednum);
-        
-        guessNumberBtn.addEventListener('click', function(){
-            let attempts = 1;
-            let guessedNumber = parseInt(guess.value); // Get the current guessed number
-            while (guessedNumber !== requirednum) {
-                attempts++
-                if (guessedNumber > requirednum) {
-                    h2.innerText = 'TOO HIGH TRY A SMALLER NUMBER';
-                    attempts++;
-                    break
-                } else if (guessedNumber < requirednum) {
-                    h2.innerText = 'TOO LOW TRY A BIGGER NUMBER';
-                    
-                    break
-                } else {
-                    h2.innerText = 'ENTER A VALID NUMBER';
-                    
-                    break
-                }
-                
-                
-           
-            } guessedNumber = parseInt(guess.value); // Update guessedNumber with new guess
-        
-            if (guessedNumber === requirednum) {
-                h1.innerText = `Congratulation You got it `;
-            }
-        });
+    startGameBtn.classList.add('hide')
+    let maximum= parseInt (prompt("Enter a  maximum number") ) 
+    while(!maximum )  {
+      maximum= parseInt (prompt("Enter a valid number") ) 
     }
-});
+    const requirednum =Math.floor(Math.random()*maximum)+1
+    console.log(requirednum)
+    let guess = (prompt ("Enter a guess or type q to end the game" ));
+    let attempts =1
+    while( parseInt(guess)!==requirednum){
+      if(guess==='q' )break;
+         
+       guess=parseInt(guess)
+    
+      if( guess > requirednum)  
+      {guess = prompt ("Too high try a smaller number")
+    ;attempts++;}
+    
+     else if (guess<requirednum){ guess=prompt("Too low try a bigger number") ;attempts++;}
+      else{ guess=(prompt("Invilid.Enter a valid  number or type q to end the game"))
+    }
+    } 
+    if (guess==='q'){h1.innerText=("You quit!!")}
+    
+    else {h1.innerText= `You got it it took you ${attempts} guesses`;}
+})    
