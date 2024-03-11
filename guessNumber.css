@@ -1,0 +1,26 @@
+.hide{
+    display: none;
+}
+body{
+    background-color: black;
+}
+#h1{
+  color: beige;
+  font-size: 25vmin;
+
+}
+.container{
+    size: 80vh;
+    text-align: center;
+}
+#maxNumberBtn{
+    font-size: 10vmin;
+}
+#startGameBtn{
+    font-size: 10vmin;
+    border-radius: 1rem;
+    border: none;
+    color: black;
+
+    
+}

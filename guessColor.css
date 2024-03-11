@@ -1,0 +1,87 @@
+.contianer{
+    text-align: center;
+    height: 70vh;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5vmin;
+}
+.hide{
+    display: none;
+}
+body{
+color: #E5FFDE;
+background-color:#1B4079;
+}
+h1{
+    height: 40vmin;
+    font-size: 15vmin;
+}
+h2{ 
+    height: 10vmin;
+    font-size: 10vmin;
+}
+#newColor{
+    font-size: 5vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+}
+input{
+    font-size: 10vmin;
+   background-color:#E8E9EB ;
+}
+#submitBtn{
+    font-size: 8vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+}
+#useMe{
+    font-size: 6vmin;
+}
+#colorpicker{
+    font-size: 7vmin;
+}
+#trouble{font-size: 7vmin;
+
+}
+#helper{
+    font-size: 4vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+}
+#helper2{
+    font-size: 3vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+}
+#helper3{
+    font-size: 3vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+}
+#reset{
+    font-size: 3vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+}
+#red{
+    font-size: 7vmin; 
+    
+}
+#green{
+    font-size: 7vmin;
+}
+#blue{
+    font-size: 7vmin;
+} 
+#bluebtn{
+    font-size: 7vmin;
+}
+#greenbtn{
+    font-size: 7vmin;
+}               
