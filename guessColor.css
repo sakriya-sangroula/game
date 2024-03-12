@@ -85,3 +85,9 @@ input{
 #greenbtn{
     font-size: 7vmin;
 }               
+#ok{
+    font-size: 3vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+}

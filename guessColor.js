@@ -20,6 +20,7 @@ let last=document.querySelector('#container')
 let attempts=0
 let link=document.querySelector('#link')
 let end = document.querySelector('#end')
+let exitbtn=document.querySelector('#ok')
 btn.addEventListener('click', function(){
     let r= Math.floor(Math.random()*256)
     let g = Math.floor(Math.random()*256)
@@ -43,6 +44,7 @@ btn.addEventListener('click', function(){
         par.innerText=''
      submit.disabled=true
      resetbtn.classList.remove('hide')
+     exitbtn.classList.remove('hide')
    
      }
      else if (input.value===""){
@@ -51,6 +53,7 @@ btn.addEventListener('click', function(){
         else if( input.value==='I quit'){
             trouble.innerText="You failed"
             resetbtn.classList.remove('hide')
+            exitbtn.classList.remove('hide')
         }
      else if(input.value!==color){
         helper.classList.remove('hide')
@@ -77,7 +80,8 @@ btnblue.addEventListener('click',function(){
     blue.classList.remove('hide')
     blue.innerText=`You Failed the last number was ${b}`
     btnblue.classList.add('hide')
- 
+    exitbtn.classList.remove('hide')
+    resetbtn.classList.remove('hide')
 
 
 })

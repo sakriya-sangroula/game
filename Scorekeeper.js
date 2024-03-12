@@ -8,8 +8,8 @@ let reset=document.querySelector('#reset')
 let gameScore=document.querySelector('#playto')
 let p1Score=0
 let p2Score=0
-let p3Score=0
-let winningScore=1
+
+let winningScore=2
 let gameover=false
 p1btn.addEventListener('click',function(){
     if(!gameover){ p1Score++

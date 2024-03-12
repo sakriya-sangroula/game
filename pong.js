@@ -1,3 +1,6 @@
+    let h1=document.querySelector('h1')
+    let exitbtn=document.querySelector('button')
+    let canvas=document.querySelector('canvas')
     //board
     let board;
     let boardWidth = 500;
@@ -108,6 +111,20 @@
         }
 
         //game over
+        if (player1Score>=5 ){
+          h1.innerText='The game has ended player 1 won the game'
+          exitbtn.classList.remove('hide')
+canvas.classList.add('hide')
+          resetGame(1)
+        }
+        else if (player2Score>=5){
+            h1.innerText='The game has ended player 2 won the game'
+             exitbtn.classList.remove('hide')
+            resetGame(1)
+            canvas.classList.add('hide')
+        }
+           
+        
         if (ball.x < 0) {
             player2Score++;
             resetGame(1);
@@ -165,6 +182,7 @@
             width: ballWidth,
             height: ballHeight,
             velocityX : direction,
-            velocityY : 2
+            velocityY : 2 ,
+         
         }
     }

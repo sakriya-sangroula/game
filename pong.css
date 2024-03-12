@@ -12,3 +12,10 @@ body{
 h1{
 color: beige;
 }
+.hide{
+    display:none;
+}
+button{
+    font-size: larger;
+    border: none;
+}

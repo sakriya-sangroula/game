@@ -59,3 +59,15 @@ border: none;
 .hide{
     display: none;
 }
+#ok{
+    padding: 1rem;
+    background-color: black;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+}
+a{
+    color: #fff;
+    
+}
