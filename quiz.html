@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Quiz</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Football Quiz</h1>
+    <form id="quizForm">
+        <fieldset>
+            <legend>Player 1</legend>
+            Q1. How many UCL does PSG Have ? <br>
+            <input type="radio" name="question1" id="correct1">0<br>
+            <input type="radio" name="question1" id='correct0'> 1 <br>
+            <input type="radio" name="question1" id='correct0'> 6<br>
+            <input type="radio" name="question1"id='correct0'> 14<br>
+
+            Q2. Who is the greatest football player of all time?<br>
+            <input type="radio" name="question2" id='correct0'>Messi <br>
+            <input type="radio" name="question2"id='correct0'> Neymar <br>
+            <input type="radio" name="question2" id="correct2">Ronaldo <br>
+            <input type="radio" name="question2"id='correct0'> Pele <br>
+
+            Q3. Which nation won the world cup in 2014 ?<br>
+            <input type="radio" name="question3" id='correct0'>France <br>
+            <input type="radio" name="question3"id="correct3">Germany <br>
+            <input type="radio" name="question3"id='correct0'>Italy <br>
+            <input type="radio" name="question3"id='correct0'>Brazil <br>
+
+            Q4. When did Portugal win the Euros?<br>
+            <input type="radio" name="question4" id="correct4"> 2016<br>
+            <input type="radio" name="question4"id='correct0'>2008<br>
+            <input type="radio" name="question4"id='correct0'>2020 <br>
+            <input type="radio" name="question4"id='correct0'>2012 <br>
+
+            Q5. How many Ballon d'Ors has Messi won ?<br>
+            <input type="radio" name="question5" id='correct0'>5<br>
+            <input type="radio" name="question5"id="correct5">8 <br>
+            <input type="radio" name="question5"id='correct0'>7 <br>
+            <input type="radio" name="question5"id='correct0'>6 <br>
+        </fieldset>
+        <button type="button" id="submitp1">Submit Player 1</button>
+    </form>
+
+    <form id="quizForm2" class="hide">
+        <fieldset>
+            <legend>Player 2</legend>
+            Q6. Which Club won the UCL in 2013 ? <br>
+            <input type="radio" name="question6" id='correct11' > Real Madrid<br>
+            <input type="radio" name="question6"id='correct11' > Spurs <br>
+            <input type="radio" name="question6"id="correct6" > Bayern Munich <br>
+            <input type="radio" name="question6"id='correct11' >Manchester City <br>
+
+            Q7. Which nation is hosting the UCL final 2024 ?<br>
+            <input type="radio" name="question7" id='correct11'>Spain <br>
+            <input type="radio" name="question7"id="correct7">England <br>
+            <input type="radio" name="question7"id='correct11'>France <br>
+            <input type="radio" name="question7"id='correct11'>Italy<br>
+
+            Q8. Which nation won the 2010 world cup ?<br>
+            <input type="radio" name="question8"id="correct8">Spain<br>
+            <input type="radio" name="question8" id='correct11'>France <br>
+            <input type="radio" name="question8"id='correct11'>Italy <br>
+            <input type="radio" name="question8"id='correct11'>Brazil <br>
+
+            Q9. Which club won the PL in 2023  ?<br>
+            <input type="radio" name="question9"id='correct11'>Manchester United<br>
+            <input type="radio" name="question9"id='correct11'> <br>
+            <input type="radio" name="question9"id="correct9">Manchester City<br>
+            <input type="radio" name="question9"id='correct11'>Brazil <br>
+
+            Q10. When did Ronald win his last Ballon d'Or ?<br>
+            <input type="radio" name="question10"id='correct11' > 2016<br>
+            <input type="radio" name="question10"id="correct10">2017 <br>
+            <input type="radio" name="question10"id='correct11'>2020 <br>
+            <input type="radio" name="question10"id='correct11'>2015 <br>
+        </fieldset>
+        <button type="button" id="submitp2">Submit Player 2</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        let btn1 = document.querySelector('#submitp1');
+        let btn2 = document.querySelector('#submitp2');
+        let player1Score = 0;
+        let player2Score = 0;
+
+        btn1.addEventListener('click', result1);
+
+        function result1() {
+            if (document.getElementById('correct1').checked) {
+                player1Score++;
+            }
+            if (document.getElementById('correct2').checked) {
+                player1Score++;
+            }
+            if (document.getElementById('correct3').checked) {
+                player1Score++;
+            }
+            if (document.getElementById('correct4').checked) {
+                player1Score++;
+            }
+            if (document.getElementById('correct5').checked) {
+                player1Score++;
+            }
+            document.getElementById('quizForm').classList.add('hide');
+            document.getElementById('quizForm2').classList.remove('hide');
+        }
+
+        btn2.addEventListener('click', result2);
+
+        function result2() {
+            if (document.getElementById('correct6').checked) {
+                player2Score++;
+            }
+            if (document.getElementById('correct7').checked) {
+                player2Score++;
+            }
+            if (document.getElementById('correct8').checked) {
+                player2Score++;
+            }
+            if (document.getElementById('correct9').checked) {
+                player2Score++;
+            }
+            if (document.getElementById('correct10').checked) {
+                player2Score++;
+            }
+            displayResult();
+        }
+
+        function displayResult() {
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "Player 1 score: " + player1Score + "<br>";
+            resultDiv.innerHTML += "Player 2 score: " + player2Score;
+        }
+    </script>
+</body>
+</html>

@@ -27,6 +27,7 @@ else {console.log( `You got it it took you ${attempts} guesses`);}
 let form = document.querySelector("form")
 let ip=document.querySelector ('input')
 let list = document.querySelector('ul')
+let btn=document.querySelector('#submit')
 form.addEventListener("submit",function(e){
     e.preventDefault(); 
     let username=ip.value
@@ -34,5 +35,8 @@ form.addEventListener("submit",function(e){
        li.innerText=username
       list.append(li)
       ip.value=""
+      
+        
+      
 })
 
